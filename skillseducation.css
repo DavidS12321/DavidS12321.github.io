@@ -1,0 +1,77 @@
+.skill-category {
+    font-weight: bold;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+    display: block;
+    color: white; /* Add this line to set text color to white */
+}
+
+.title {
+    font-size: 1.5em;
+    color: #ffffff; /* Set color to black */
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.tab-content {
+    display: none;
+    text-align: left; /* Align the content to the left */
+    max-width: 600px; /* Limit the width of the content */
+    margin-left: auto; /* Move content to the right */
+    margin-right: 100px; /* Adjust the right margin as needed */
+    margin-bottom: 200px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 0 10px 0;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.tab::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 4px;
+    background-color: rgb(8, 0, 156);
+    transition: width 0.3s;
+}
+
+.tab-container {
+    margin-top: -130px;
+    margin-left: 20px; /* Added the unit (e.g., pixels) */
+}
+
+.tab:hover::after {
+    width: 50%;
+}
+
+.tab.active {
+    color: #ffffff;
+}
+
+.tab.active::after {
+    width: 50%;
+}
+
+#education-content {
+    margin-left: auto;
+    margin-top: -310px;
+    text-align: center;
+}
+
+#skills-content{
+    margin-top: -326px;
+    font-size: 18px;
+    text-align: center;
+}
