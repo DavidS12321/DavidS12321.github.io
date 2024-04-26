@@ -1,0 +1,87 @@
+#Contact {
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    margin-right: 550px;
+}
+
+.contact-form {
+    max-width: 300px;
+    text-align: left;
+}
+
+.contact-form textarea{
+    font-family: 'Raleway', sans-serif;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    font-size: 12px;
+    width: 100px;
+    height: 25px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+label {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #fff;
+    color: #000;
+    padding: 25px 70px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.resume-container {
+    margin-left: 550px;
+    margin-top: -350px;
+    margin-bottom: 300px;
+}

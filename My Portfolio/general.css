@@ -1,0 +1,219 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: white;
+}
+
+.button {
+    cursor: pointer;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 150px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid #000000;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(8, 0, 156);
+    transition: width 0.3s;
+}
+
+.button:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.button:hover::after {
+    width: 100%;
+}
+
+.contact-bar {
+    background-color: #000000;
+    color: white;
+    padding: 1em;
+    text-align: center; /* Change to center text */
+    position: fixed;
+    bottom: 0;
+    left: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+}
+
+.contact-bar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 360px; /* Add margin between links for spacing */
+    margin-right:400px;
+    text-align: center;
+}
+
+.circle-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #000000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 100px 30px; /* Adjust this value to control the space between the buttons */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-decoration: none;
+    color: #000000;
+}
+
+.circle-button:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.circle-buttons-container {
+    text-align: center;
+    margin-top: 50px; /* Add margin for spacing */
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 4em;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#info-background {
+    position: relative;
+}
+
+.info {
+    margin-left: 200px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 2em;
+    margin-top: -50px;
+}
+
+nav {
+    background-color: #000000;
+    padding: 1.5em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav div {
+    text-align: left;
+    color: white;
+    margin-top: 20px;
+}
+
+#OverlaySection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 255, 0.8);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+  }  
+
+#logo {
+    max-width: 100%;
+    height: 125px;
+    margin-left: 300px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #000000;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.profile-container info {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+#profile-image-container {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    margin-left: 300px; 
+    margin-right: 100px;
+}
+
+#profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resume-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+section p {
+    color: white;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+    display: block;
+    color: white;
+}
+
+.title {
+    font-size: 1.5em;
+    color: #ffffff;
+    max-width: 600px;
+    margin: 20px 0;
+}
