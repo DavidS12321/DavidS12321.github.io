@@ -19,7 +19,7 @@ function sendEmail() {
 function downloadResume() {
     // Unique cache-buster using the current timestamp
     const cacheBuster = '?v=' + new Date().getTime();
-    const resumeUrl = 'https://raw.githubusercontent.com/DavidS12321/DavidS12321.github.io/main/David%20Shahi%20Resume.pdf' + cacheBuster;
+    const resumeUrl = 'https://DavidS12321.github.io/David%20Shahi%20Resume.pdf' + cacheBuster;
     window.open(resumeUrl, '_blank');
 }
 
