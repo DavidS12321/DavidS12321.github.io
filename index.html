@@ -177,7 +177,9 @@
             }
     
         function downloadResume() {
-            const resumeUrl = 'David Shahi Resume.pdf';
+            // Unique cache-buster using the current timestamp
+            const cacheBuster = '?v=' + new Date().getTime();
+            const resumeUrl = 'https://raw.githubusercontent.com/DavidS12321/DavidS12321.github.io/main/David%20Shahi%20Resume.pdf' + cacheBuster;
             window.open(resumeUrl, '_blank');
         }
 
