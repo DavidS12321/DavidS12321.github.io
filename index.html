@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="skillseducation.css">
     <link rel="stylesheet" type="text/css" href="general.css">
     <link rel="stylesheet" type="text/css" href="projects.css">
-    <script src="scripts.js"></script>
     
 </head>
 
@@ -62,13 +61,12 @@
         <div class="project-container">
             <div class="project-box">
                 <img src="project1.png" alt="Project 1">
-                <p>Created an immersive VR experience with swordplay and shooting elements using Unity3D and C#. Features
-                    VR slicing, scene loading, and UI interactions.
+                <p>Created an immersive VR experience with swordplay and shooting elements using Unity3D and C#. Engineered VR slicing, scene loading, and UI interactions.
                 </p>
             </div>
             <div class="project2-box">
                 <img src="project2.png" alt="Project 2">
-                <p>An app for gamers to find teammates for the games they play. Developed using Flutter and Firebase</p>
+                <p>Developed an app for gamers to find teammates for the games they play with sophisticated search algorithms using Flutter and Firebase</p>
             </div>
             <div class="project-box">
                 <img src="project3.jpg" alt="Project 3">
@@ -91,9 +89,7 @@
     
                 <div class="about-me-middle">
                     <p class="about-me-paragraph">
-                        Dynamic and ambitious Computer Science graduate with a passion for immersive technologies and innovative software development. 
-                        Eager to leverage skills in full-stack development, virtual reality (VR) programming, and mobile app development to contribute to cutting-edge projects. 
-                        Seeking a challenging role where I can apply my expertise in Java, C++, Python, Unity, and Flutter to drive impactful solutions and enhance user experiences.
+                        David Shahi is a driven Computer Science graduate with expertise in full-stack, VR, and mobile development, skilled in Java, C++, Python, Unity, and Android.
                     </p>
                 </div>
     
@@ -110,12 +106,9 @@
         <!-- Content for Skills -->
         <div class="tab-content" id="skills-content">
             <ul>
-                <li><strong>Programming Languages:</strong> Java, Python, C++, C#, C HTML, CSS, Javascript, Dart</li>
-                <li><strong>Development Tools:</strong> Unity, Visual Studio Code, IntelliJ, Eclipse, Android Studio, Firebase, Flutter, Jupyter Notebook, Apache NetBeans, Microsoft Visual Studio</li>
-                <li><strong>Technologies:</strong> Object-Oriented Programming, Algorithms & Data Structures, Mobile Application Development, VR Development, Wireshark</li>
-                <li><strong>Version Control:</strong> GitHub, Git</li>
-                <li><strong>Office Applications:</strong> Word, Excel, PowerPoint, Outlook</li>
-                <li> <strong>Languages:</strong> English, Armenain</li>
+                <li><strong>Programming Languages:</strong> Java, Python, C++, C#, C, HTML, CSS, JavaScript, Dart</li>
+                <li><strong>Development Tools:</strong> Git, VS Code, IntelliJ, Eclipse, Apache NetBeans</li>
+                <li><strong>Technologies:</strong> Object-Oriented Programming, Algorithms & Data Structures, Unit Testing, Mobile and VR Development using Android Studio, Firebase, Flutter, and Unity.</li>
             </ul>
         </div>        
     
@@ -156,6 +149,86 @@
         <a href="mailto:shahidavid02@gmail.com">Email: shahidavid02@gmail.com</a>
         <a href="https://www.linkedin.com/in/davidshahi" target="_blank">LinkedIn</a>
     </div>
+
+    <!-- Scripts -->
+    <script>
+        function showSection(sectionId) {
+            const selectedSection = document.getElementById(sectionId);
+
+            if (selectedSection) {
+                selectedSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function sendEmail() {
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+    
+                const mailtoLink = `mailto:shahidavid02@gmail.com?subject=Message from ${name}&body=${message}%0D%0A%0D%0AReply to: ${email}`;
+    
+                window.location.href = mailtoLink;
+            }
+    
+        function downloadResume() {
+            const resumeUrl = 'David Shahi Resume.pdf';
+            window.open(resumeUrl, '_blank');
+        }
+
+        function showTab(tabName) {
+
+            // Hide all tab contents
+            var tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            // Show the selected tab content
+            var selectedTabContent = document.getElementById(tabName);
+            selectedTabContent.style.display = 'block';
+
+            // Update active tab styling
+            var activeTabs = document.querySelectorAll('.tab');
+            activeTabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+
+            // Find the button that corresponds to the selected content
+            var activeTabButton = document.getElementById(tabName.replace('-content', '-tab'));
+            if (activeTabButton) {
+                activeTabButton.classList.add('active');
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Define the sections to observe
+            const sections = document.querySelectorAll('.scroll-section');
+
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5 // Adjust as needed
+            };
+
+            // Callback function to handle intersection events
+            const callback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Entry is in the viewport, update the URL and styles
+                        window.history.replaceState(null, null, '#' + entry.target.id);
+                    }
+                });
+            };
+
+            // Create an Intersection Observer instance
+            const observer = new IntersectionObserver(callback, options);
+
+            // Observe each section
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 
 </body>
 
